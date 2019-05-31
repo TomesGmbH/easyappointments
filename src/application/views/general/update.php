@@ -79,7 +79,7 @@
     </div>
 
     <footer>
-        Powered by <a href="http://easyappointments.org">Easy!Appointments</a>
+        Powered by <a href="https://idana.one">Idana Calendar</a>
     </footer>
 </body>
 </html>

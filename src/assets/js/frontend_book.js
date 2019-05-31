@@ -70,7 +70,7 @@ window.FrontendBook = window.FrontendBook || {};
                         text: '#666666'
                     },
                     button: {
-                        background: '#3DD481',
+                        background: '#277691',
                         text: '#ffffff'
                     }
                 },
@@ -498,13 +498,13 @@ window.FrontendBook = window.FrontendBook || {};
         }
 
         var selServiceId = $('#select-service').val();
-        var servicePrice;
-        var serviceCurrency;
+        // var servicePrice;
+        // var serviceCurrency;
 
         $.each(GlobalVariables.availableServices, function (index, service) {
             if (service.id == selServiceId) {
-                servicePrice = '<br>' + service.price;
-                serviceCurrency = service.currency;
+                // servicePrice = '<br>' + service.price;
+                // serviceCurrency = service.currency;
                 return false; // break loop
             }
         });
@@ -515,7 +515,7 @@ window.FrontendBook = window.FrontendBook || {};
             + '<strong class="text-primary">'
             + $('#select-provider option:selected').text() + '<br>'
             + selectedDate + ' ' + $('.selected-hour').text()
-            + servicePrice + ' ' + serviceCurrency
+            // + servicePrice + ' ' + serviceCurrency
             + '</strong>' +
             '</p>';
 
@@ -677,9 +677,9 @@ window.FrontendBook = window.FrontendBook || {};
                     html += '[' + EALang.duration + ' ' + service.duration + ' ' + EALang.minutes + ']';
                 }
 
-                if (service.price != '' && service.price != null) {
-                    html += '[' + EALang.price + ' ' + service.price + ' ' + service.currency + ']';
-                }
+                //if (service.price != '' && service.price != null) {
+                //    html += '[' + EALang.price + ' ' + service.price + ' ' + service.currency + ']';
+                //}
 
                 html += '<br>';
 

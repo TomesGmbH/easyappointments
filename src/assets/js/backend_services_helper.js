@@ -118,8 +118,8 @@
             var service = {
                 name: $('#service-name').val(),
                 duration: $('#service-duration').val(),
-                price: $('#service-price').val(),
-                currency: $('#service-currency').val(),
+                // price: $('#service-price').val(),
+                // currency: $('#service-currency').val(),
                 description: $('#service-description').val(),
                 availabilities_type: $('#service-availabilities-type').val(),
                 attendants_number: $('#service-attendants-number').val()
@@ -285,8 +285,8 @@
         $('#service-id').val(service.id);
         $('#service-name').val(service.name);
         $('#service-duration').val(service.duration);
-        $('#service-price').val(service.price);
-        $('#service-currency').val(service.currency);
+        // $('#service-price').val(service.price);
+        // $('#service-currency').val(service.currency);
         $('#service-description').val(service.description);
         $('#service-availabilities-type').val(service.availabilities_type);
         $('#service-attendants-number').val(service.attendants_number);
@@ -349,7 +349,7 @@
             '<div class="service-row entry" data-id="' + service.id + '">' +
             '<strong>' + service.name + '</strong><br>' +
             service.duration + ' min - ' +
-            service.price + ' ' + service.currency + '<br>' +
+            // service.price + ' ' + service.currency + '<br>' +
             '</div><hr>';
 
         return html;

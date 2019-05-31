@@ -335,7 +335,7 @@
 
                 <div id="frame-footer">
                     Powered By
-                    <a href="http://easyappointments.org" target="_blank">Easy!Appointments</a>
+                    <a href="https://idana.one" target="_blank">Idana Calendar</a>
                     |
                     <span id="select-language" class="label label-success">
     		        	<?= ucfirst($this->config->item('language')) ?>

@@ -512,7 +512,7 @@
         <!-- ABOUT TAB -->
 
         <div role="tabpanel" class="tab-pane" id="about-app">
-            <h3>Easy!Appointments</h3>
+            <h3>Idana Calendar</h3>
 
             <p>
                 <?= lang('about_app_info') ?>

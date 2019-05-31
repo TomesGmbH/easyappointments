@@ -100,17 +100,18 @@
                         <label for="service-duration"><?= lang('duration_minutes') ?> *</label>
                         <input id="service-duration" class="form-control required" type="number" min="15">
                     </div>
-
+<!--
                     <div class="form-group">
-                        <label for="service-price"><?= lang('price') ?> *</label>
+                        <label for="service-price">< ?= lang('price') ?> *</label>
                         <input id="service-price" class="form-control required">
                     </div>
 
+
                     <div class="form-group">
-                        <label for="service-currency"><?= lang('currency') ?></label>
+                        <label for="service-currency">< ?= lang('currency') ?></label>
                         <input id="service-currency" class="form-control" maxlength="32">
                     </div>
-
+-->
                     <div class="form-group">
                         <label for="service-category"><?= lang('category') ?></label>
                         <select id="service-category" class="form-control"></select>

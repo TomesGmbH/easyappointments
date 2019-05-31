@@ -31,7 +31,7 @@ class Config {
     // ------------------------------------------------------------------------
 
     const BASE_URL      = 'http://url-to-easyappointments-directory';
-    const LANGUAGE      = 'english';
+    const LANGUAGE      = 'german';
     const DEBUG_MODE    = FALSE;
 
     // ------------------------------------------------------------------------
@@ -42,6 +42,16 @@ class Config {
     const DB_NAME       = '';
     const DB_USERNAME   = '';
     const DB_PASSWORD   = '';
+
+    // ------------------------------------------------------------------------
+    // SMTP SETTINGS
+    // ------------------------------------------------------------------------
+
+    const SMTP_HOST       = '';
+    const SMTP_USER       = '';
+    const SMTP_PW   = '';
+    const SMTP_CRYPTO   = ''; // 'ssl' or 'tls'
+    const SMTP_PORT   = '';
 
     // ------------------------------------------------------------------------
     // GOOGLE CALENDAR SYNC

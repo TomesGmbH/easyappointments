@@ -39,8 +39,8 @@ function get_sample_service()
     return [
         'name' => 'Test Service',
         'duration' => 30,
-        'price' => 50.0,
-        'currency' => 'Euro',
+        //'price' => 50.0,
+        //'currency' => 'Euro',
         'description' => 'This is a test service automatically inserted by the installer.',
         'availabilities_type' => 'flexible',
         'attendants_number' => 1,

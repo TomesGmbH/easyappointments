@@ -74,8 +74,6 @@ CREATE TABLE IF NOT EXISTS `ea_services` (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(256),
     `duration` INT(11),
-    `price` DECIMAL(10, 2),
-    `currency` VARCHAR(32),
     `description` TEXT,
     `availabilities_type` VARCHAR(32) DEFAULT 'flexible',
     `attendants_number` INT(11) DEFAULT '1',

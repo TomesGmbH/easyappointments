@@ -61,7 +61,7 @@ class API_V1_Controller extends CI_Controller {
      */
     protected function _requestAuthentication()
     {
-        header('WWW-Authenticate: Basic realm="Easy!Appointments"');
+        header('WWW-Authenticate: Basic realm="Idana Calendar"');
         header('HTTP/1.0 401 Unauthorized');
         exit('You are not authorized to use the API.');
     }
