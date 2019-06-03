@@ -107,7 +107,7 @@ class Email {
         switch ($company['date_format'])
         {
             case 'DMY':
-                $date_format = 'd/m/Y';
+                $date_format = 'dd.mm.YYYY';
                 break;
             case 'MDY':
                 $date_format = 'm/d/Y';
@@ -211,7 +211,7 @@ class Email {
         switch ($company['date_format'])
         {
             case 'DMY':
-                $date_format = 'd/m/Y';
+                $date_format = 'dd.mm.YYYY';
                 break;
             case 'MDY':
                 $date_format = 'm/d/Y';

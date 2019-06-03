@@ -61,7 +61,7 @@ window.FrontendBook = window.FrontendBook || {};
             window.console = function () {
             }; // IE compatibility
         }
-        
+
         if (GlobalVariables.displayCookieNotice) {
             cookieconsent.initialise({
                 palette: {
@@ -105,8 +105,8 @@ window.FrontendBook = window.FrontendBook || {};
         });
 
         $('#select-date').datepicker({
-            dateFormat: 'dd-mm-yy',
-            firstDay: 0,
+            dateFormat: 'dd.mm.yyyy',
+            firstDay: 1,
             minDate: 0,
             defaultDate: Date.today(),
 
@@ -510,20 +510,22 @@ window.FrontendBook = window.FrontendBook || {};
         });
 
         var html =
-            '<h4>' + $('#select-service option:selected').text() + '</h4>' +
+            '<h4>' + EALang.your_booking + '</h4>' +
             '<p>'
             + '<strong class="text-primary">'
-            + $('#select-provider option:selected').text() + '<br>'
-            + selectedDate + ' ' + $('.selected-hour').text()
+            + selectedDate + ' ' + EALang.at + ' ' + $('.selected-hour').text() + EALang._h + '</strong><br>'
+            + '<b>' + EALang.service + '</b>: '+ $('#select-service option:selected').text() + '<br>'
+            + '<b>' + EALang.provider + '</b>: ' + $('#select-provider option:selected').text() +
             // + servicePrice + ' ' + serviceCurrency
-            + '</strong>' +
             '</p>';
 
         $('#appointment-details').html(html);
 
         // Customer Details
+        var salutation = $('#salutation').val();
         var firstName = GeneralFunctions.escapeHtml($('#first-name').val());
         var lastName = GeneralFunctions.escapeHtml($('#last-name').val());
+        var birthDate = GeneralFunctions.formatDate($('#birth-date').val(), GlobalVariables.dateFormat);
         var phoneNumber = GeneralFunctions.escapeHtml($('#phone-number').val());
         var email = GeneralFunctions.escapeHtml($('#email').val());
         var address = GeneralFunctions.escapeHtml($('#address').val());
@@ -531,17 +533,17 @@ window.FrontendBook = window.FrontendBook || {};
         var zipCode = GeneralFunctions.escapeHtml($('#zip-code').val());
 
         html =
-            '<h4>' + firstName + ' ' + lastName + '</h4>' +
+            '<h4>' + EALang.your_data + '</h4>' +
             '<p>' +
-            EALang.phone + ': ' + phoneNumber +
+            '<b>' + EALang.name + '</b>: ' + salutation + ' ' + firstName + ' ' + lastName +
             '<br/>' +
-            EALang.email + ': ' + email +
+            '<b>' + EALang.birth_date + '</b>: ' + birthDate +
             '<br/>' +
-            EALang.address + ': ' + address +
+            '<b>' + EALang.phone + '</b>: ' + phoneNumber +
             '<br/>' +
-            EALang.city + ': ' + city +
+            '<b>' + EALang.email + '</b>: ' + email +
             '<br/>' +
-            EALang.zip_code + ': ' + zipCode +
+            '<b>' + EALang.address + '</b>: ' + address + ', ' + zipCode + ' ' + city +
             '</p>';
 
         $('#customer-details').html(html);
@@ -562,7 +564,7 @@ window.FrontendBook = window.FrontendBook || {};
 
         postData.appointment = {
             start_datetime: $('#select-date').datepicker('getDate').toString('yyyy-MM-dd')
-            + ' ' + Date.parse($('.selected-hour').text()).toString('HH:mm') + ':00',
+                + ' ' + Date.parse($('.selected-hour').text()).toString('HH:mm') + ':00',
             end_datetime: _calcEndDatetime(),
             notes: $('#notes').val(),
             is_unavailable: false,
@@ -674,7 +676,7 @@ window.FrontendBook = window.FrontendBook || {};
                 }
 
                 if (service.duration != '' && service.duration != null) {
-                    html += '[' + EALang.duration + ' ' + service.duration + ' ' + EALang.minutes + ']';
+                    html += EALang.duration + ': ' + service.duration + ' ' + EALang.minutes;
                 }
 
                 //if (service.price != '' && service.price != null) {

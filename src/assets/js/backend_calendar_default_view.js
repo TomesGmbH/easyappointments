@@ -1056,7 +1056,7 @@ window.BackendCalendarDefaultView = window.BackendCalendarDefaultView || {};
 
         switch (GlobalVariables.dateFormat) {
             case 'DMY':
-                columnFormat = 'ddd D/M';
+                columnFormat = 'ddd D/M'; //TODO: switch it when goign to month into month view
                 break;
 
             case 'MDY':
@@ -1092,7 +1092,7 @@ window.BackendCalendarDefaultView = window.BackendCalendarDefaultView || {};
             defaultView: defaultView,
             height: _getCalendarHeight(),
             editable: true,
-            firstDay: 0,
+            firstDay: 1,
             snapDuration: '00:30:00',
             timeFormat: timeFormat,
             slotLabelFormat: slotTimeFormat,

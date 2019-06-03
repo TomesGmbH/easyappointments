@@ -170,7 +170,7 @@ window.BackendCalendarUnavailabilitiesModal = window.BackendCalendarUnavailabili
 
         switch (GlobalVariables.dateFormat) {
             case 'DMY':
-                dateFormat = 'dd/mm/yy';
+                dateFormat = 'dd.mm.yyyy';
                 break;
             case 'MDY':
                 dateFormat = 'mm/dd/yy';
@@ -207,7 +207,7 @@ window.BackendCalendarUnavailabilitiesModal = window.BackendCalendarUnavailabili
             timeText: EALang.time,
             hourText: EALang.hour,
             minuteText: EALang.minutes,
-            firstDay: 0
+            firstDay: 1
         });
         $dialog.find('#unavailable-start').val(start);
 
@@ -237,7 +237,7 @@ window.BackendCalendarUnavailabilitiesModal = window.BackendCalendarUnavailabili
             timeText: EALang.time,
             hourText: EALang.hour,
             minuteText: EALang.minutes,
-            firstDay: 0
+            firstDay: 1
         });
         $dialog.find('#unavailable-end').val(end);
 
